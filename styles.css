@@ -1,0 +1,58 @@
+:root {
+  --slider-val: 300px;
+}
+
+input {
+  outline: none;
+}
+
+body {
+  padding: 24px;
+  background-color: #808080;
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 3 * 24px);
+  font-family: sans-serif;
+}
+
+body > *:nth-child(1) {
+  background-color: #ffffff;
+  margin-bottom: 24px;
+  padding: 24px;
+}
+
+body > *:nth-child(2) {
+  flex-grow: 1;
+  overflow: auto;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, calc(var(--slider-val) + 2 * 24px));
+  gap: 24px;
+}
+
+.item {
+  width: calc(100% - 2 * 24px);
+}
+
+.item img {
+  padding: 24px;
+  width: 100%;
+}
+
+.item.bg-white img {
+  background-color: #ffffff;
+}
+
+.item.bg-black img {
+  background-color: #000000;
+}
+
+.item.bg-blue img {
+  background-color: rgb(58,88,178);
+}
+
+.item.bg-brown img {
+  background-color: rgb(121,84,73);
+}

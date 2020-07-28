@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css" />
+  <title>Document</title>
+</head>
+<body>
+  <div>
+    <strong>Logo width:</strong>
+    <span id="range-display">300px</span>
+    <input id="range-selector" type="range" style="width: 100%" min="16" max="8192" step="1" value="300" oninput="sliderOnChange()" />
+  </div>
+  <div>
+    <div class="grid">
+      <div class="item bg-white">
+        <img src='icon/black.svg' />
+        <img src='word/black.svg' />
+      </div>
+      <div class="item bg-black">
+        <img src='icon/white.svg' />
+        <img src='word/white.svg' />
+      </div>
+      <div class="item bg-blue">
+        <img src='icon/white.svg' />
+        <img src='word/white.svg' />
+      </div>
+      <div class="item bg-brown">
+        <img src='icon/white.svg' />
+        <img src='word/white.svg' />
+      </div>
+    </div>
+  </div>
+  <script>
+    const rangeSelector = document.querySelector('#range-selector');
+    const rangeDisplay = document.querySelector('#range-display');
+    const sliderOnChange = () => {
+      document.documentElement.style.setProperty('--slider-val', rangeSelector.value + 'px');
+      rangeDisplay.innerHTML = rangeSelector.value + 'px';
+    }
+  </script>
+</body>
+</html>
