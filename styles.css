@@ -49,10 +49,10 @@ body > *:nth-child(2) {
   background-color: #000000;
 }
 
-.item.bg-blue img {
-  background-color: rgb(58,88,178);
+.item.bg-brown400 img {
+  background-color: #8d6e63;
 }
 
-.item.bg-brown img {
-  background-color: rgb(121,84,73);
+.item.bg-brown500 img {
+  background-color: #795548;
 }
